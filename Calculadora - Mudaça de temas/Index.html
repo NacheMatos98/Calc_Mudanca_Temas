@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <header>
+        <h2>Calc</h2>
+
+        <div class="designToggleMain">
+
+            <p class="theme">THEME</p>
+
+            <div class="designToggle">
+                <div class="themeNumber">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+
+                <div class="theme-toggle">
+                    <label class="custom-radio-button">
+                        <input id="first" name="toggle-state" onclick="setTheme('one')" type="radio" checked>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="custom-radio-button">
+                        <input id="first" name="toggle-state" onclick="setTheme('two')" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="custom-radio-button">
+                        <input id="first" name="toggle-state" onclick="setTheme('three')" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <p type="text" id="total">
+
+    <div></div>
+
+    <div class="calculate">
+        <div class="small">
+            <div class="box number" onclick="inserir('7')">7</div>
+            <div class="box number" onclick="inserir('8')">8</div>
+            <div class="box number" onclick="inserir('9')">9</div>
+
+            <div class="box" id="del" onclick="backspace()"><i class="bx bx-arrow-back"></i></div>
+
+            <div class="box number" onclick="inserir('4')">4</div>
+            <div class="box number" onclick="inserir('5')">5</div>
+            <div class="box number" onclick="inserir('6')">6</div>
+
+            <div class="box operator" onclick="inserir('+')">+</div>
+
+            <div class="box number" onclick="inserir('1')">1</div>
+            <div class="box number" onclick="inserir('2')">2</div>
+            <div class="box number" onclick="inserir('3')">3</div>
+
+            <div class="box operator" onclick="inserir('-')">-</div>
+
+            <div class="box number" onclick="inserir('.')">,</div>
+
+            <div class="box number" onclick="inserir('0')">0</div>
+
+            <div class="box operator" onclick="inserir('/')">/</div>
+
+            <div class="box operator" onclick="inserir('*')">x</div>
+        </div>
+
+        <div class="medium">
+            <div class="box" id="reset" onclick="limparTudo()">RESET</div>
+            <div class="box" id="equal" onclick="calcular()">=</div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
